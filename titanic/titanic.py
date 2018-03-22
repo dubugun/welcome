@@ -188,13 +188,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 
 
-#knn
+
 
 k_fold = KFold(n_splits=5, shuffle=True, random_state=0)
 
 tr = train.drop('Survived', axis=1)
 tt = train['Survived']
 
+
+#knn
 X_train, X_test, y_train, y_test = train_test_split(tr,tt, random_state = 0)
 
 a = []
